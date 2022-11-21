@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Hit.wav-0f5373ce1ae477f48f51a787bdb97faf.sample"
+path="res://.import/Unpause.wav-9c01acfc68bd180d9ad80598d20be28d.sample"
 
 [deps]
 
-source_file="res://assets/Music and Sounds/Hit.wav"
-dest_files=[ "res://.import/Hit.wav-0f5373ce1ae477f48f51a787bdb97faf.sample" ]
+source_file="res://assets/music_and_sounds/Unpause.wav"
+dest_files=[ "res://.import/Unpause.wav-9c01acfc68bd180d9ad80598d20be28d.sample" ]
 
 [params]
 

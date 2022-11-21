@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Unpause.wav-083386a266987fcc3d5b7f8baf04e5d7.sample"
+path="res://.import/EnemyDie.wav-b9bb0a7d8231e24130afc6024a58b7fd.sample"
 
 [deps]
 
-source_file="res://assets/Music and Sounds/Unpause.wav"
-dest_files=[ "res://.import/Unpause.wav-083386a266987fcc3d5b7f8baf04e5d7.sample" ]
+source_file="res://assets/music_and_sounds/EnemyDie.wav"
+dest_files=[ "res://.import/EnemyDie.wav-b9bb0a7d8231e24130afc6024a58b7fd.sample" ]
 
 [params]
 

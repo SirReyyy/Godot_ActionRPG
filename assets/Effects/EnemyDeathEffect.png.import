@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EnemyDeathEffect.png-5c329254bfe7cc58aa8bb08400fccdc3.stex"
+path="res://.import/EnemyDeathEffect.png-54b19977ec9603bf43cce771b1c89513.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Effects/EnemyDeathEffect.png"
-dest_files=[ "res://.import/EnemyDeathEffect.png-5c329254bfe7cc58aa8bb08400fccdc3.stex" ]
+source_file="res://assets/effects/EnemyDeathEffect.png"
+dest_files=[ "res://.import/EnemyDeathEffect.png-54b19977ec9603bf43cce771b1c89513.stex" ]
 
 [params]
 

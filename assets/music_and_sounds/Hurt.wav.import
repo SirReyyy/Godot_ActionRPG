@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Menu Select.wav-1205db6574d59dfac1d8738a4adaa83a.sample"
+path="res://.import/Hurt.wav-6ff1f0b11adc93bcc7995db1d6534b4a.sample"
 
 [deps]
 
-source_file="res://assets/Music and Sounds/Menu Select.wav"
-dest_files=[ "res://.import/Menu Select.wav-1205db6574d59dfac1d8738a4adaa83a.sample" ]
+source_file="res://assets/music_and_sounds/Hurt.wav"
+dest_files=[ "res://.import/Hurt.wav-6ff1f0b11adc93bcc7995db1d6534b4a.sample" ]
 
 [params]
 
