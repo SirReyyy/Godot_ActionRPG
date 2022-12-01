@@ -110,6 +110,13 @@ player_roll={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Player_Hurtbox"
+2d_physics/layer_4="Enemy_Hurtbox"
+
 [physics]
 
 common/enable_pause_aware_picking=true
