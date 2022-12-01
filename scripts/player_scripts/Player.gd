@@ -12,10 +12,12 @@ enum {
 
 const acceleration_rate = 300
 const max_speed = 80
+const roll_speed = 100
 const friction_rate = 300
 
 var current_state = MOVE_STATE
 var velocity = Vector2.ZERO
+var roll_vector = Vector2.ZERO
 
 func _ready():
 	animTree.active = true
@@ -29,7 +31,7 @@ func _physics_process(delta):
 		ATTACK_STATE:
 			attack_state(delta)
 		ROLL_STATE:
-			pass
+			roll_state(delta)
 	
 	# -- end of _physics_process -- #
 
@@ -40,9 +42,11 @@ func move_state(delta):
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector2.ZERO:
+		roll_vector = input_vector
 		animTree.set("parameters/Idle/blend_position", input_vector)
 		animTree.set("parameters/Run/blend_position", input_vector)
-		animTree.set("parameters/Attack/blend_position", input_vector)		
+		animTree.set("parameters/Attack/blend_position", input_vector)
+		animTree.set("parameters/Roll/blend_position", input_vector)
 		
 		animState.travel("Run")
 		velocity = velocity.move_toward(input_vector * max_speed, acceleration_rate * delta)
@@ -50,12 +54,18 @@ func move_state(delta):
 		animState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, friction_rate * delta)
 	
-	velocity = move_and_slide(velocity)
+	move_slide()
 	
 	if Input.is_action_just_pressed("player_attack"):
 		current_state = ATTACK_STATE
 	
+	if Input.is_action_just_pressed("player_roll"):
+		current_state = ROLL_STATE
+	
 	# -- end of move_state -- #
+
+func move_slide():
+	velocity = move_and_slide(velocity)
 
 func attack_state(delta):
 	velocity = Vector2.ZERO
@@ -63,8 +73,21 @@ func attack_state(delta):
 	
 	# -- end of attack_state -- #
 
-# temp function
+func roll_state(delta):
+	velocity = roll_vector * roll_speed
+	animState.travel("Roll")
+	move_slide()
+	
+	# -- end of roll_state -- #
+
+# temp functions
 func attack_anim_end():
 	current_state = MOVE_STATE
+	
+	# --  end of attack_anim_end -- #
 
-	# --  end of Player.gd -- #
+func roll_anim_end():
+	velocity = Vector2.ZERO
+	current_state = MOVE_STATE
+	
+	# --  end of roll_anim_end -- #
