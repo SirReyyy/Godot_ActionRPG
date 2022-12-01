@@ -67,4 +67,4 @@ func attack_state(delta):
 func attack_anim_end():
 	current_state = MOVE_STATE
 
-# --  end of Player.gd -- #
+	# --  end of Player.gd -- #
